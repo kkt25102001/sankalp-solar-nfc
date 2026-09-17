@@ -1,5 +1,5 @@
 /**
- * SANKALP ENTERPRISE - POWER SOLAR SOLUTION
+ * RAYVOLT SOLAR - PROTECTING YOUR POWER
  * NFC Digital Business Card & Mini Website Logic
  * Powered by Khushi Creative Tech
  */
@@ -7,11 +7,11 @@
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Business & Contact Data Configuration
   const BUSINESS_DATA = {
-    name: "Sankalp Enterprise",
-    fullName: "Sankalp Enterprise - Power Solar Solution",
+    name: "RAYVOLT SOLAR",
+    fullName: "RAYVOLT SOLAR - Protecting Your Power",
     phone: "+919998400629",
     rawPhone: "9998400629",
-    email: "sankalpenterprise2229@gmail.com",
+    email: "rayvoltsolar.sales@gmail.com",
     address: "Kuvadva, Rajkot, Gujarat 360023, India",
     instagram: "https://www.instagram.com/sankalp_enterprise_?utm_source=qr&stkn=MThlbG5yb25zdWlrZQ==",
     facebook: "https://www.facebook.com/share/1L7hgCSMjZ/",
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // State Management
-  let currentLang = localStorage.getItem('sankalp_lang') || 'gu'; // Default to Gujarati
+  let currentLang = localStorage.getItem('rayvolt_lang') || 'gu'; // Default to Gujarati
   let selectedPack = '1 Bottle (500ml)';
 
   // DOM Elements
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // =========================================================
   function updateLanguage(lang) {
     currentLang = lang;
-    localStorage.setItem('sankalp_lang', lang);
+    localStorage.setItem('rayvolt_lang', lang);
     document.documentElement.lang = lang;
 
     // Toggle button label shows the opposite/alternate option
@@ -114,17 +114,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const vCardContent = [
       'BEGIN:VCARD',
       'VERSION:3.0',
-      'N:Enterprise;Sankalp;;;',
-      'FN:Sankalp Enterprise - Power Solar Solution',
-      'ORG:Sankalp Enterprise',
-      'TITLE:Power Solar Solution & Solar Cleaning Services',
+      'N:SOLAR;RAYVOLT;;;',
+      'FN:RAYVOLT SOLAR - Protecting Your Power',
+      'ORG:RAYVOLT SOLAR',
+      'TITLE:Protecting Your Power | Solar Solutions & Cleaning Liquid',
       `TEL;TYPE=CELL,VOICE,PREF:${BUSINESS_DATA.phone}`,
       `EMAIL;TYPE=WORK,INTERNET:${BUSINESS_DATA.email}`,
       `ADR;TYPE=WORK:;;Kuvadva;Rajkot;Gujarat;360023;India`,
       `URL;TYPE=WORK:${BUSINESS_DATA.developerWebsite}`,
       `X-SOCIALPROFILE;TYPE=instagram:${BUSINESS_DATA.instagram}`,
       `X-SOCIALPROFILE;TYPE=facebook:${BUSINESS_DATA.facebook}`,
-      'NOTE:Specialized Solar Panel Cleaning Liquid (500ml), Residential & Industrial Solar Fitting, Industrial AMC Cleaning Services. Rajkot, Gujarat.',
+      'NOTE:RAYVOLT SOLAR - Specialized Solar Panel Cleaning Liquid (500ml), Residential & Industrial Solar Fitting, Industrial AMC Cleaning Services. Protecting Your Power. Rajkot, Gujarat.',
       'END:VCARD'
     ].join('\r\n');
 
@@ -133,15 +133,15 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const downloadLink = document.createElement('a');
     downloadLink.href = url;
-    downloadLink.setAttribute('download', 'Sankalp_Enterprise_Solar.vcf');
+    downloadLink.setAttribute('download', 'RAYVOLT_SOLAR_Contact.vcf');
     document.body.appendChild(downloadLink);
     downloadLink.click();
     document.body.removeChild(downloadLink);
     URL.revokeObjectURL(url);
 
     const msg = currentLang === 'gu' 
-      ? 'સંકલ્પ એન્ટરપ્રાઇઝ કોન્ટેક્ટ કાર્ડ ડાઉનલોડ થયું! (ઓપન કરી સેવ કરો)' 
-      : 'Sankalp Enterprise Contact card downloaded! (Open to save)';
+      ? 'RAYVOLT SOLAR કોન્ટેક્ટ કાર્ડ ડાઉનલોડ થયું! (ઓપન કરી સેવ કરો)' 
+      : 'RAYVOLT SOLAR Contact card downloaded! (Open to save)';
     showToast(msg);
   }
 
@@ -168,9 +168,9 @@ document.addEventListener('DOMContentLoaded', () => {
     btnOrderLiquid.addEventListener('click', () => {
       let message = "";
       if (currentLang === 'gu') {
-        message = `નમસ્તે સંકલ્પ એન્ટરપ્રાઇઝ,\n\nહું *સોલાર પેનલ ક્લિનિંગ લિક્વિડ (500ml)* માટે ઓર્ડર કરવા માંગુ છું.\n📦 પસંદ કરેલ પેક: *${selectedPack}*\n\nકૃપા કરીને કિંમત અને ડિલિવરીની વિગત આપો.`;
+        message = `નમસ્તે RAYVOLT SOLAR,\n\nહું *RAYVOLT સોલાર પેનલ ક્લિનિંગ લિક્વિડ (500ml)* માટે ઓર્ડર કરવા માંગુ છું.\n📦 પસંદ કરેલ પેક: *${selectedPack}*\n\nકૃપા કરીને કિંમત અને ડિલિવરીની વિગત આપો.`;
       } else {
-        message = `Hello Sankalp Enterprise,\n\nI would like to order *Solar Panel Cleaning Liquid (500ml)*.\n📦 Selected Pack: *${selectedPack}*\n\nPlease provide pricing, delivery details and payment options.`;
+        message = `Hello RAYVOLT SOLAR,\n\nI would like to order *RAYVOLT Solar Panel Cleaning Liquid (500ml)*.\n📦 Selected Pack: *${selectedPack}*\n\nPlease provide pricing, delivery details and payment options.`;
       }
       const whatsappUrl = `https://wa.me/${BUSINESS_DATA.rawPhone}?text=${encodeURIComponent(message)}`;
       window.open(whatsappUrl, '_blank');
@@ -186,9 +186,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const serviceName = btn.getAttribute('data-service');
       let message = "";
       if (currentLang === 'gu') {
-        message = `નમસ્તે સંકલ્પ એન્ટરપ્રાઇઝ,\n\nહું આપની સર્વિસ *"${serviceName}"* વિશે પૂછપરછ અને ક્વોટેશન મેળવવા માંગુ છું.\nકૃપા કરીને વિગતવાર માહિતી આપો.`;
+        message = `નમસ્તે RAYVOLT SOLAR,\n\nહું આપની સર્વિસ *"${serviceName}"* વિશે પૂછપરછ અને ક્વોટેશન મેળવવા માંગુ છું.\nકૃપા કરીને વિગતવાર માહિતી આપો.`;
       } else {
-        message = `Hello Sankalp Enterprise,\n\nI am interested in your *"${serviceName}"* service and would like to get a quotation and consultation.\nPlease assist.`;
+        message = `Hello RAYVOLT SOLAR,\n\nI am interested in your *"${serviceName}"* service and would like to get a quotation and consultation.\nPlease assist.`;
       }
       const whatsappUrl = `https://wa.me/${BUSINESS_DATA.rawPhone}?text=${encodeURIComponent(message)}`;
       window.open(whatsappUrl, '_blank');
@@ -231,14 +231,14 @@ document.addEventListener('DOMContentLoaded', () => {
   if (btnCalcWhatsapp) {
     btnCalcWhatsapp.addEventListener('click', () => {
       const kw = plantSlider ? plantSlider.value : "5";
-      const gained = gainedUnits ? gainedUnits.textContent : "150 Units";
+      const gained = gainedUnits ? gainedUnits.textContent : "+150 Units";
       const saved = savedMoney ? savedMoney.textContent : "₹ 1,200+";
 
       let message = "";
       if (currentLang === 'gu') {
-        message = `નમસ્તે સંકલ્પ એન્ટરપ્રાઇઝ,\n\nમારી પાસે *${kw} kW* નો સોલાર પ્લાન્ટ છે.\nમેં કેલ્ક્યુલેટર પર જોયું કે નિયમિત ક્લિનિંગથી મને દર મહિને *${gained}* વધુ અને અંદાજે *${saved}* ની બચત થઈ શકે છે.\n\nકૃપા કરીને આ પ્લાન્ટ માટે સોલાર ક્લિનિંગ લિક્વિડ / AMC સર્વિસનું ક્વોટેશન આપો.`;
+        message = `નમસ્તે RAYVOLT SOLAR,\n\nમારી પાસે *${kw} kW* નો સોલાર પ્લાન્ટ છે.\nમેં કેલ્ક્યુલેટર પર જોયું કે નિયમિત RAYVOLT ક્લિનિંગથી મને દર મહિને *${gained}* વધુ અને અંદાજે *${saved}* ની બચત થઈ શકે છે.\n\nકૃપા કરીને આ પ્લાન્ટ માટે સોલાર ક્લિનિંગ લિક્વિડ / AMC સર્વિસનું ક્વોટેશન આપો.`;
       } else {
-        message = `Hello Sankalp Enterprise,\n\nI have a *${kw} kW* Solar Plant setup.\nAs per your calculator, cleaning can help generate *${gained}* extra units and save *${saved}* per month.\n\nPlease share details and quotation for Solar Cleaning Liquid / AMC Contract for this capacity.`;
+        message = `Hello RAYVOLT SOLAR,\n\nI have a *${kw} kW* Solar Plant setup.\nAs per your calculator, regular cleaning with RAYVOLT can help generate *${gained}* extra units and save *${saved}* per month.\n\nPlease share details and quotation for Solar Cleaning Liquid / AMC Contract for this capacity.`;
       }
       const whatsappUrl = `https://wa.me/${BUSINESS_DATA.rawPhone}?text=${encodeURIComponent(message)}`;
       window.open(whatsappUrl, '_blank');
@@ -258,11 +258,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
       let message = "";
       if (currentLang === 'gu') {
-        message = `*સંકલ્પ એન્ટરપ્રાઇઝ - નવી પૂછપરછ:*\n\n👤 નામ: ${name}\n📍 શહેર/ગામ: ${city}\n📌 રસ ધરાવતી સેવા: ${service}\n`;
+        message = `*RAYVOLT SOLAR - નવી પૂછપરછ:*\n\n👤 નામ: ${name}\n📍 શહેર/ગામ: ${city}\n📌 રસ ધરાવતી સેવા: ${service}\n`;
         if (note) message += `📝 વિગત: ${note}\n`;
         message += `\nકૃપા કરીને મને વહેલી તકે સંપર્ક કરો. આભાર!`;
       } else {
-        message = `*Sankalp Enterprise - New Lead / Inquiry:*\n\n👤 Name: ${name}\n📍 City/Location: ${city}\n📌 Requirement: ${service}\n`;
+        message = `*RAYVOLT SOLAR - New Lead / Inquiry:*\n\n👤 Name: ${name}\n📍 City/Location: ${city}\n📌 Requirement: ${service}\n`;
         if (note) message += `📝 Note: ${note}\n`;
         message += `\nPlease get in touch with me soon. Thank you!`;
       }
@@ -284,18 +284,18 @@ document.addEventListener('DOMContentLoaded', () => {
     if (typeof QRCode !== 'undefined') {
       new QRCode(qrContainer, {
         text: shareUrl,
-        width: 156,
-        height: 156,
-        colorDark: "#0b1728",
+        width: 160,
+        height: 160,
+        colorDark: "#081a30",
         colorLight: "#ffffff",
         correctLevel: QRCode.CorrectLevel.H
       });
     } else {
       // Fallback SVG QR placeholder if library fails to load
       qrContainer.innerHTML = `
-        <div style="font-size:12px;color:#0369a1;text-align:center;padding:10px;">
+        <div style="font-size:12px;color:#0ea5e9;text-align:center;padding:10px;">
           <i class="fa-solid fa-qrcode" style="font-size:70px;margin-bottom:8px;"></i><br>
-          <strong>Sankalp Enterprise NFC Card</strong>
+          <strong>RAYVOLT SOLAR Digital Card</strong>
         </div>`;
     }
   }
@@ -325,8 +325,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Web Share API
   async function triggerWebShare() {
     const shareData = {
-      title: 'Sankalp Enterprise - Power Solar Solution',
-      text: 'Check out Sankalp Enterprise: Solar Panel Cleaning Liquid (500ml), Solar Fitting & AMC Cleaning Services in Rajkot, Gujarat.',
+      title: 'RAYVOLT SOLAR - Protecting Your Power',
+      text: 'RAYVOLT SOLAR: Eco-Friendly Solar Panel Cleaning Liquid (500ml), Solar Rooftop Installation & Industrial AMC Cleaning Services in Rajkot, Gujarat.',
       url: window.location.href
     };
 
